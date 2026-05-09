@@ -6,6 +6,7 @@ import (
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/wailsapp/wails/v2/pkg/options/linux"
 )
 
 //go:embed all:frontend/dist
@@ -17,9 +18,12 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:  "kokoni-ec1-desktop",
+		Title:  "KOKONI EC1 Controller",
 		Width:  1024,
 		Height: 768,
+		Linux: &linux.Options{
+			ProgramName: "kokoni-ec1",
+		},
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},

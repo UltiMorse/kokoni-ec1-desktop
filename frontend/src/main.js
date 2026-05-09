@@ -323,7 +323,7 @@ async function sendCommandSequence(commands) {
 }
 
 function isJobActiveState(state) {
-  return state === 'printing' || state === 'paused';
+  return state === 'printing' || state === 'paused' || state === 'pausing';
 }
 
 function updateFilamentButtons() {
@@ -506,7 +506,7 @@ $('upload').onclick = async () => {
       method: 'POST',
       body: form,
     });
-    $('uploadResult').textContent = pretty(data);
+    $('uploadResult').textContent = `Uploaded: ${data.file_name || selectedFile.name}`;
     await refresh();
   } catch (err) {
     $('uploadResult').textContent = String(err.message || err);
