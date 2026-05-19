@@ -551,25 +551,25 @@ $('levelCenter').onclick = () => sendLevelingSequence('Move to center', [
 $('levelXY1010').onclick = () => sendLevelingSequence('Move to Left Front', [
   'G90',
   'G1 Z45 F900',
-  'G1 X10 Y10 F3000',
+  'G1 X0 Y0 F3000',
 ]);
 
 $('levelXY9010').onclick = () => sendLevelingSequence('Move to Right Front', [
   'G90',
   'G1 Z45 F900',
-  'G1 X90 Y10 F3000',
+  'G1 X100 Y0 F3000',
 ]);
 
 $('levelXY1090').onclick = () => sendLevelingSequence('Move to Left Back', [
   'G90',
   'G1 Z45 F900',
-  'G1 X10 Y90 F3000',
+  'G1 X0 Y100 F3000',
 ]);
 
 $('levelXY9090').onclick = () => sendLevelingSequence('Move to Right Back', [
   'G90',
   'G1 Z45 F900',
-  'G1 X90 Y90 F3000',
+  'G1 X100 Y100 F3000',
 ]);
 
 
