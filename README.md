@@ -1,7 +1,7 @@
 # kokoni-ec1-desktop
 
 KOKONI EC1 3DプリンターをPCから操作するためのデスクトップGUIアプリケーションです。
-本アプリはWailsベースのデスクトップアプリケーションで、プリンターのMCUへ直接接続するのではなく、Android側HTTPエージェント(`kokoni-ec1-server`)へアクセスして操作を行います。先に導入しておくことをおすすめします。https://github.com/UltiMorse/kokoni-ec1-server
+本アプリはWailsベースのデスクトップアプリケーションで、プリンターのMCUへ直接接続するのではなく、Android側HTTPエージェント(`kokoni-ec1-server`)へアクセスして操作を行います。先に導入しておくことをおすすめします。https://github.com/nakonanya/kokoni-ec1-server
 
 PC側からプリンターへ接続し、.gcodeのアップロード、印刷の開始などが可能です。必要であればPCを切断しても印刷は継続されるため、後でPCから再接続して監視・操作することもできます。
 
